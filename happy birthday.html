@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Asthaa</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      background-color: #f6ede0;
+      font-family: 'Montserrat', sans-serif;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+    .scene {
+      width: 100%;
+      max-width: 400px;
+      aspect-ratio: 16 / 11;
+      perspective: 1000px;
+    }
+    .card {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 1s;
+      cursor: pointer;
+    }
+    .card.opened {
+      transform: rotateY(180deg);
+    }
+    .card-face {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    }
+    .card-front {
+      background: linear-gradient(135deg, #f7d9c4, #eec4ba);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Great Vibes', cursive;
+      font-size: 2rem;
+      color: #8b3e4d;
+      padding: 1rem;
+      text-align: center;
+    }
+    .card-back {
+      background: #fff8f0;
+      transform: rotateY(180deg);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 1.2rem;
+      box-sizing: border-box;
+      text-align: center;
+    }
+    .card-back h2 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 1.8rem;
+      color: #8b3e4d;
+      margin-bottom: 0.5rem;
+    }
+    .card-back p {
+      font-size: 1rem;
+      margin-bottom: 1.2rem;
+      color: #4a3c2a;
+    }
+    .download-btn {
+      background-color: #8b3e4d;
+      color: white;
+      padding: 0.6rem 1.5rem;
+      border: none;
+      border-radius: 30px;
+      font-size: 1rem;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+    .download-btn:hover {
+      background-color: #6d2f3a;
+    }
+  </style>
+</head>
+<body>
+  <div class="scene">
+    <div class="card" onclick="this.classList.toggle('opened')">
+      <div class="card-face card-front">
+        Happy Birthday<br />Asthaa 💖
+      </div>
+      <div class="card-face card-back">
+        <h2>Hi Asthaa 🎉</h2>
+        <p> something for you...<br />Click below to download and install it.</p>
+        <a
+          class="download-btn"
+          href="https://gofile.io/d/qG45g5"
+          download
+        >
+          Open it ✨
+        </a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
